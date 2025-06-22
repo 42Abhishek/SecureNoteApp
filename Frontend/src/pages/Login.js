@@ -5,7 +5,7 @@ import {useContext} from "react";
 import {UserContext} from '../contexts/UserContext';
 
 
-const Login = () => {
+const Login = (e) => {
 
   e.preventDefault();
   
