@@ -19,18 +19,7 @@ A fullstack note-taking application with user authentication and secure session 
 
 ## 📁 Folder Structure
 SecureNoteApp/
-├── Frontend/ # React frontend (Parcel)
-│ ├── src/
-│ ├── dist/
-│ ├── .env # Not committed
-│ ├── package.json
-│ └── .gitignore
-├── Backend/ # Node.js + Express backend
-│ ├── routes/
-│ ├── controllers/
-│ ├── models/
-│ ├── .env # Not committed
-│ ├── server.js
-│ └── package.json
+├── Frontend/ # React app
+├── Backend/ # Node/Express app
 ├── .gitignore
 └── README.md
