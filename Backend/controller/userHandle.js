@@ -80,7 +80,6 @@ const logout = async (req,res) => {
         httpOnly: true,
         secure: true,
         sameSite: "None"
-        expires: new Date(Date.now())
       });
 
       res.status(200).send("Logged out successfully");
