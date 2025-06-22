@@ -7,6 +7,8 @@ import {UserContext} from '../contexts/UserContext';
 
 const Login = () => {
 
+  e.preventDefault();
+  
   const navigate = useNavigate();
 
   const [email, setEmail] = useState('');
