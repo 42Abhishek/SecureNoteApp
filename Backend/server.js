@@ -6,9 +6,22 @@ const cors=require('cors');
 const userRoutes = require("./routes/routeUser");
 const noteRoutes = require("./routes/routeNote");
 const cookieParser = require("cookie-parser");
+const session = require("express-session");
 
 app.use(express.json());
+
+app.use(session({
+  secret: "your-secret",
+  resave: false,
+  saveUninitialized: false,
+  cookie: {
+    sameSite: "none",  
+    secure: true 
+  }
+}));
 app.use(cookieParser());
+
+
 
 app.use(cors({
       origin : 'https://securenoteapp-frontend.onrender.com',
