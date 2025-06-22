@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use(cors({
-      origin : 'http://localhost:1234',
+      origin : 'https://securenoteapp-frontend.onrender.com',
       credentials : true
 }))
 
