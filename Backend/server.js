@@ -7,8 +7,17 @@ const userRoutes = require("./routes/routeUser");
 const noteRoutes = require("./routes/routeNote");
 const cookieParser = require("cookie-parser");
 const session = require("express-session");
+require('dotenv').config();
+
+
+
+app.use(cors({
+      origin : 'https://securenoteapp-frontend.onrender.com',
+      credentials : true
+}))
 
 app.use(express.json());
+app.use(cookieParser());
 
 app.use(session({
   secret: "your-secret",
@@ -19,18 +28,7 @@ app.use(session({
     secure: true 
   }
 }));
-app.use(cookieParser());
 
-
-
-app.use(cors({
-      origin : 'https://securenoteapp-frontend.onrender.com',
-      credentials : true
-}))
-
-// console.log("server");
-
-require('dotenv').config();
 
 app.use("/user",userRoutes);
 app.use("/note",noteRoutes);
