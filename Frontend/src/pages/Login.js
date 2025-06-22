@@ -5,9 +5,7 @@ import {useContext} from "react";
 import {UserContext} from '../contexts/UserContext';
 
 
-const Login = (e) => {
-
-  e.preventDefault();
+const Login = () => {
   
   const navigate = useNavigate();
 
