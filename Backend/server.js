@@ -9,6 +9,7 @@ const cookieParser = require("cookie-parser");
 const session = require("express-session");
 require('dotenv').config();
 
+app.use(cookieParser());
 
 
 app.use(cors({
