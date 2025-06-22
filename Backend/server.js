@@ -6,7 +6,7 @@ const cors=require('cors');
 const userRoutes = require("./routes/routeUser");
 const noteRoutes = require("./routes/routeNote");
 const cookieParser = require("cookie-parser");
-const session = require("express-session");
+
 require('dotenv').config();
 
 app.use(cookieParser());
@@ -20,15 +20,6 @@ app.use(cors({
 app.use(express.json());
 app.use(cookieParser());
 
-app.use(session({
-  secret: "your-secret",
-  resave: false,
-  saveUninitialized: false,
-  cookie: {
-    sameSite: "none",  
-    secure: true 
-  }
-}));
 
 
 app.use("/user",userRoutes);
