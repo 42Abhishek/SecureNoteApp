@@ -76,7 +76,7 @@ const logout = async (req,res) => {
 
    try{
 
-      res.clearcookie("token",null,{
+      res.clearCookie("token",null,{
         httpOnly: true,
         secure: true,
         sameSite: "None"
